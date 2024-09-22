@@ -1,0 +1,197 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: black#222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: blue#222;
+}
+
+h4 {
+    font-size: 20px;
+    color: white#222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+/*header start*/
+#Header {
+    width: 100%;
+    max-width: 1650px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+    #Header .logo {
+        max-width: 50px;
+        height: auto;
+    }
+
+    #Header h2 {
+        font-size: 1.2em;
+        color: #000000;
+        margin-right: 700px;
+    }
+
+/* Navbar */
+#navbar {
+    list-style-type: none;
+}
+
+
+
+html, body, #container, .ember-application {
+    background-color:rgb(134, 183, 252);
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    font-size: 30px;
+    /*margin-left: 4px;*/ /* Hackish */
+}
+/* Search */
+#search {
+    min-height: 40px;
+    width: 100%;
+}
+
+    #search input[type='button'] {
+        height: 39px;
+        width: 100%;
+        padding-left:5px;
+    }
+
+@media (min-width: 481px) {
+    .search__button {
+        width: 155px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search__button {
+        width: 99px;
+    }
+}
+
+#search input[type='text'] {
+    width: 100%;
+    line-height: 2.7em;
+}
+
+#search span {
+    display: block;
+    background-color: green;
+    overflow: hidden;
+}
+
+/* Books */
+#books {
+}
+
+@media (min-width: 48px) {
+    #books {
+        
+        width: 185px;
+        flex-wrap:wrap;
+    }
+    /*#books li:after { content: attr(data-book); } */
+    li:after {
+        content: attr(data-book);
+    }
+}
+
+@media (max-width: 480px) {
+    #books {
+        width: 53px;
+    }
+}
+
+/* Chapters */
+#chapters {
+    width: 70px;
+}
+
+/* Verses */
+#verses {
+    min-width: 60%;
+}
+
+#books, #verses, #chapters {
+    /* background-color: lightblue; */
+    height: 95%;
+}
+
+/* Helpers */
+.fl {
+    float: left;
+}
+
+.ovf {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* min-width 481px : Tablets, Laptops, .. */
+/* max-width 480px : Extra Small Devices, Phones */
+
+/* Philemon */
+@media (min-width: 481px) {
+    li[data-book='lemon']:before {
+        content: 'Philemon' !important;
+        color: black !important;
+    }
+}
+
+@media (max-width: 480px) {
+    li[data-book='lemon']:before {
+        content: 'Phm' !important;
+        color: black !important;
+    }
+}
+
+li[data-book='lemon'] {
+    color: white;
+}
