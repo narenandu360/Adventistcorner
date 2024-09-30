@@ -1,4 +1,4 @@
-﻿/* Reset default styles */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,33 +6,29 @@
 }
 
 /* Global Styles */
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     background: url('logo/bgpic.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
     color: #333;
+    padding: 0;
+    margin: 0;
+}
 
-    /* Header Section */
-    #Header {
+/* Navbar */
+#Header {
     width: 100%;
-    max-width: 1600px;
-    height:50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align:center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #Header .logo {
@@ -42,76 +38,66 @@ body {
 
 #Header h2 {
     font-size: 1.5em;
-    color: #000000;
-    margin-right: 700px;
+    color: #000;
 }
 
-/* Navbar */
 #navbar {
     list-style-type: none;
 }
 
 /* Features Section */
-/* Features Section */
 .section-f1 {
     width: 100%;
-    max-width: 1600px;
-    height:600px;
+    padding-top: 80px; /* To ensure content doesn't overlap with fixed navbar */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
 .fea-container {
     display: flex;
-    padding-left:0px;
-    padding-right:150px;
+    padding-top:50px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
 .fea {
-    flex: 1 1 calc(20% - 30px);
-    width:300px;
-    height:200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    flex: 1 1 300px;
+    max-width: 300px;
+    min-width: 200px;
+    background-color: rgba(43, 165, 248, 0.2);
+    text-align: center;
+    padding: 20px;
     border-radius: 10px;
-    padding: 30px;
     transition: transform 0.3s ease;
-    max-width: 150px; /* Reduced the maximum width */
 }
 
-    .fea:hover {
-        transform: translateY(-5px);
-        background-color: rgb(7, 70, 245, 0.2)
-    }
+.fea:hover {
+    transform: translateY(-5px);
+    background-color: rgba(7, 70, 245, 0.2);
+}
 
-    .fea img {
-        width: 100px; /* Reduced the image size */
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 5px;
-    }
+.fea img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
 
-    .fea h5 {
-        font-size: 1em; /* Reduced the font size */
-        color: #fff;
-        text-align: center;
-    }
-
+.fea h5 {
+    font-size: 1em;
+    color: #fff;
+    margin-top: 10px;
+}
 
 /* Marquee */
 .mar {
     width: 100%;
-    max-width: 1600px;
     margin-top: 20px;
 }
 
@@ -126,7 +112,6 @@ body {
 /* Footer Section */
 .section-f2 {
     width: 100%;
-    max-width: 1600px;
     padding: 20px;
     background-color: rgba(150, 70, 246, 0.5);
     border-radius: 10px;
@@ -141,10 +126,6 @@ footer {
     justify-content: center;
 }
 
-footer .col {
-    margin-bottom: 20px;
-}
-
 footer .logo {
     max-width: 80px;
     height: auto;
@@ -156,7 +137,6 @@ footer h3, footer h4 {
 
 footer p {
     color: #fff;
-    margin: 5px 0;
 }
 
 footer .Follow h4 {
@@ -180,117 +160,40 @@ footer .icon a:hover {
     font-size: 0.9em;
 }
 
-
-
-/*for Index page*/
-
-
-
-
-
-
-
-
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-    #Header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-        #Header h2 {
-            margin-left: 0;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-    .fea-container {
-        flex-direction: column;
-        align-items: center;
+    #Header h2 {
+        font-size: 1.2em;
+        margin-right: 0;
     }
 
     .fea {
-        flex: 1 1 100%;
-        max-width: 400px;
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .fea img {
+        width: 80px;
     }
 }
 
 @media (max-width: 480px) {
-    .fea h5 {
-        font-size: 1em;
-    }
-
-    .marq {
-        font-size: 1em;
-    }
-
-    footer h3, footer h4 {
-        font-size: 1.2em;
-    }
-}
-
-@media(max-height:1000px) {
-    
-
-    body {
-        font-family: Arial, sans-serif;
-        background: url(logo/bgpic.jpg) no-repeat center center fixed;
-        background-size: 1700px;
-        background-attachment: fixed;
-        background: darkblue;
-        display: flex;
+    #Header {
         flex-direction: column;
-        align-items: center;
-        justify-content: top;
-        min-height: 100vh;
-        padding: 2px;
-        color: #333;
-        padding-left: 0px;
+        text-align: center;
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    #Header h2 {
+        font-size: 1.1em;
+        margin-right: 0;
     }
 
-    body[Attributes Style] {
-        background-image: url(logo/bgpic.jpg);
+    .fea {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
-    user agent stylesheet
-    body {
-        display: block;
-        margin: 8px;
+    .fea img {
+        width: 70px;
     }
 }
-
-    @media (max-width: 78px) {
-        .fea-container {
-            flex-direction: column;
-            align-items: center;
-            padding: px;
-        }
-
-
-
-        .fea-container {
-            display: flex;
-            padding-left: 0px;
-            padding-right: 0px;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            padding: px;
-        }
-
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-    }
-
-
